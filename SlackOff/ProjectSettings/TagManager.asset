@@ -6,6 +6,7 @@ TagManager:
   tags:
   - tree
   - coin
+  - box
   layers:
   - Default
   - TransparentFX

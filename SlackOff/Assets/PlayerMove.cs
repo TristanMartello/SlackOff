@@ -15,21 +15,20 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate(){
         movement.x = Input.GetAxisRaw ("Horizontal");
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        
         movement.y = Input.GetAxisRaw ("Vertical");
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        
+        
+        //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
     
     void OnCollisionEnter2D(Collision2D other){
-         if (other.gameObject.tag == "coin"){
-              //gameObject.GetComponent<AudioSource>().Play();
-              //GameObject boomFX = Instantiate(hitVFX, other.gameObject.transform.position, Quaternion.identity);
-              //StartCoroutine(DestroyVFX(boomFX));
-
-              Destroy(other.gameObject);
-              Debug.Log("hit");
-              //gameHandlerObj.AddScore(1);
-         }
+        if (other.gameObject.tag == "coin"){
+            Destroy(other.gameObject);
+            Debug.Log("hit");
+            //gameHandlerObj.AddScore(1);
+        } else if (other.gameObject.tag == "box") {
+            Debug.Log("Box hit");
+        }
     }
 }
