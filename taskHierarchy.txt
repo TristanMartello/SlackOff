@@ -1,0 +1,32 @@
+
+A Tier:
+ - Core mechanic: pick up an item and have it signified somehow, hold small sprite, 'hand' HUD, etc
+ - Add scores- happiness and suspicion, make display meters on the two sides of the screen
+ - Add basic items- two types: work and fun
+ - Basic level design, a set of walls and desk sprites
+ - Boss existing in game
+ - End game with different win/loss conditions 
+
+
+B Tier:
+ - Add more advanced object types with stat boosts (coffee for speed)
+ - Boss mechanic, responding to suspiscion, possibly even moving through the office with line of sight 
+ - Desk as a storage unit, long term item management
+
+
+C Tier:
+ - Maybe different levels over the course of the week, happiness/work standards change as the week progresses
+
+
+Item Brainstorm:
+  - Floppy disks for different games- slack items
+  - Rubiks cube - slack
+  - Stack of paper - work
+  - Stuffed animal - slack
+  - Newton's Cradle/Stress ball - slack
+  - Large work phone - work
+  - Stapler - work
+  - 
+  - 
+  - Coffee for a speed boost
+  - Whiskey in the bosses desk
