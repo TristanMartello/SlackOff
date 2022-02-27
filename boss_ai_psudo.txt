@@ -1,0 +1,15 @@
+Main routine is followed unless Suspicion is triggered:
+  Boss main routine events:
+    works at desk idly (is normally aware)
+    walks a path to check on employees (highly aware, may check on player)
+    takes heated confrence call (low awareness)
+    goes to bathroom (high awareness while going to/from, no awareness during)
+    
+ When suspicion is triggered:
+  Boss has two suspicion metrics general and individual
+    When low ammounts of work is done in general around the office, general suspicion rises 
+      May lead to increased frequency of employee checkins
+        This gets too high, maybe a team bonding mini game is triggered?
+      Catching a non player slacker lowers general suspicion (maybe it makes other employees hate the player more though if player throws them under the bus?)
+    When individual reports are lacking or the boss sees the player do something suspicious individual suspicion rises
+      individual suspicion leads to boss spending more time surveiling player, (could lead to firing)
