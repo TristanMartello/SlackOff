@@ -556,7 +556,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Holding: ??'
+  m_Text: 'Holding: Coin'
 --- !u!222 &894573770
 CanvasRenderer:
   m_ObjectHideFlags: 0
