@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemContainer: MonoBehaviour {
 
     public GameInventory playerInventory;
-    public string ItemName = "FloppyDisk";
+    public string ItemName;
 
     void Awake(){
         if (GameObject.FindWithTag("GameHandler") != null) {
