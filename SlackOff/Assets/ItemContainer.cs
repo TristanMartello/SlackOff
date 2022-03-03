@@ -15,12 +15,11 @@ public class ItemContainer: MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other){
         Debug.Log("On trigger collision");
-        if (other.gameObject.tag == "Player"){
+        if (other.gameObject.tag == "Player" && playerInventory.checkEmpty()){
             Debug.Log("You found a " + ItemName);
             playerInventory.InventoryAdd(ItemName);
             //playerInventory.removeObjectFromLevel(ItemName);
             Destroy(gameObject);
-            //gameObject.setActive(false);
         }
     }
 }

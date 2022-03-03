@@ -8,6 +8,8 @@ TagManager:
   - coin
   - box
   - GameHandler
+  - FloppyDisk
+  - RubiksCube
   layers:
   - Default
   - TransparentFX
