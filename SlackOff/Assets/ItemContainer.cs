@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemContainer: MonoBehaviour {
 
     public GameInventory playerInventory;
-    public string ItemName = "item1";
+    public string ItemName = "FloppyDisk";
 
     void Awake(){
         if (GameObject.FindWithTag("GameHandler") != null) {
@@ -20,6 +20,7 @@ public class ItemContainer: MonoBehaviour {
             playerInventory.InventoryAdd(ItemName);
             //playerInventory.removeObjectFromLevel(ItemName);
             Destroy(gameObject);
+            //gameObject.setActive(false);
         }
     }
 }
