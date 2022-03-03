@@ -21,10 +21,12 @@ public class PlayerMove : MonoBehaviour
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         
         
+        
         //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
     
     void OnCollisionEnter2D(Collision2D other){
+        Debug.Log(other.gameObject.tag);
         if (other.gameObject.tag == "coin"){
             //if (Input.GetKeyDown("space")){
             heldItemName = other.gameObject.tag;

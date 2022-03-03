@@ -7,7 +7,7 @@ TagManager:
   - tree
   - coin
   - box
-  - gameHandler
+  - GameHandler
   layers:
   - Default
   - TransparentFX
