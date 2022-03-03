@@ -20,7 +20,6 @@ public class ItemContainer: MonoBehaviour {
             playerInventory.InventoryAdd(ItemName);
             //playerInventory.removeObjectFromLevel(ItemName);
             Destroy(gameObject);
-            //gameObject.setActive(false);
         }
     }
 }
