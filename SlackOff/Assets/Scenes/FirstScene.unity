@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 114782556}
   m_Layer: 0
   m_Name: FloppyDiskSprite
-  m_TagString: Untagged
+  m_TagString: FloppyDisk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -511,7 +511,7 @@ GameObject:
   - component: {fileID: 357320696}
   m_Layer: 0
   m_Name: RubiksCubeSprite
-  m_TagString: Untagged
+  m_TagString: RubiksCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -524,7 +524,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357320694}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4507625, y: 0.29817975, z: 709.72003}
+  m_LocalPosition: {x: -10.36, y: -0.17, z: 709.72003}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1790270354}
@@ -1103,7 +1103,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1790270354}
-  - component: {fileID: 1790270355}
   m_Layer: 0
   m_Name: RubiksCube
   m_TagString: Untagged
@@ -1126,20 +1125,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1790270355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1790270353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 369ad49772f8bf8478049a4e5e858bf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInventory: {fileID: 2008037000}
-  ItemName: RubiksCube
 --- !u!1 &1929556176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,6 +1293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InventoryMenu: {fileID: 1066798576}
   diskImage: {fileID: 114782554}
+  cubeImage: {fileID: 357320694}
 --- !u!1 &2010420667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,6 +1485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DiskContainerPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5421148321092788375, guid: 9e277151735460942803640c77b8f1cc, type: 3}
+      propertyPath: m_TagString
+      value: FloppyDisk
+      objectReference: {fileID: 0}
     - target: {fileID: 5421148321092788379, guid: 9e277151735460942803640c77b8f1cc, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1553,3 +1543,68 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e277151735460942803640c77b8f1cc, type: 3}
+--- !u!1001 &7999156278200414347
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1978968154310890940, guid: 2a7639a7970681844908de5d1f2c93c8, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978968154310890940, guid: 2a7639a7970681844908de5d1f2c93c8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978968154310890940, guid: 2a7639a7970681844908de5d1f2c93c8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978968154310890940, guid: 2a7639a7970681844908de5d1f2c93c8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978968154310890940, guid: 2a7639a7970681844908de5d1f2c93c8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978968154310890940, guid: 2a7639a7970681844908de5d1f2c93c8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978968154310890940, guid: 2a7639a7970681844908de5d1f2c93c8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978968154310890940, guid: 2a7639a7970681844908de5d1f2c93c8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978968154310890940, guid: 2a7639a7970681844908de5d1f2c93c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978968154310890940, guid: 2a7639a7970681844908de5d1f2c93c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978968154310890940, guid: 2a7639a7970681844908de5d1f2c93c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110214930497759678, guid: 2a7639a7970681844908de5d1f2c93c8, type: 3}
+      propertyPath: m_Name
+      value: CubeContainerPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110214930497759678, guid: 2a7639a7970681844908de5d1f2c93c8, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614226819949806024, guid: 2a7639a7970681844908de5d1f2c93c8, type: 3}
+      propertyPath: playerInventory
+      value: 
+      objectReference: {fileID: 2008037000}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2a7639a7970681844908de5d1f2c93c8, type: 3}
