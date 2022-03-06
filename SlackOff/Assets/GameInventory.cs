@@ -8,64 +8,99 @@ public class GameInventory : MonoBehaviour {
     //5 Inventory Items:
     public GameObject InventoryMenu;
 
-    public static bool diskBool = false;    
     public static string currItem = "None";
-    public GameObject diskImage;
-    
-    public static int coins = 0;
 
+    public static bool diskBool = false;
+    public static bool cubeBool = false;    
+    public GameObject diskImage;
+    public GameObject cubeImage;
+    
+    private int arrLen = 2;
+    private GameObject[] objArr;
+    private bool[] boolArr;
+    
     void Start(){
         InventoryMenu.SetActive(true);
         diskImage.SetActive(false);
-    
+        cubeImage.SetActive(false);
+        getArrays();
+        
         InventoryDisplay();
     }
 
-    void InventoryDisplay(){
-        if (diskBool == true) {
-            diskImage.SetActive(true);
-        } else {
-            diskImage.SetActive(false);
-        }
+    void getArrays() {
+        objArr = new GameObject[arrLen];
+        boolArr = new bool[arrLen];
         
+        objArr[0] = diskImage;
+        objArr[1] = cubeImage;
+
+        boolArr[0] = diskBool;
+        boolArr[1] = cubeBool;
+
+    }
+
+    void InventoryDisplay(){
+        for (int i = 0; i < arrLen; i ++){
+            if (boolArr[i]) {
+                objArr[i].SetActive(true);
+            } else {
+                objArr[i].SetActive(false);
+            }
+        }
         //Text coinTextB = coinText.GetComponent ();
         //coinTextB.text = ("COINS: " + coins);
     }
 
     public void InventoryAdd(string item){
         string foundItemName = item;
-        //Debug.Log("ITEM FOUND");
-        if (foundItemName == "FloppyDisk") {
-            diskBool = true;
+        
+        for (int i = 0; i < arrLen; i ++) {
+            if (foundItemName == objArr[i].tag){
+                boolArr[i] = true;
+            }
         }
+        
         currItem = foundItemName;
-    
         InventoryDisplay();
     }
     
     public void InventoryRemove(string item){
         string itemRemove = item;
-        if (itemRemove == "FloppyDisk") {
-            diskBool = false;
+        
+        for (int i = 0; i < arrLen; i ++){
+            if (item == objArr[i].tag) {
+                boolArr[i] = false;
+            }
         }
+        
         currItem = "None";
         InventoryDisplay();
     }
     
     public GameObject getCurrObj(){
-        if (currItem == "FloppyDisk") {
-            return diskImage;
-        } else {
-            return null;
+        
+        for (int i = 0; i < arrLen; i ++){
+            if (currItem == objArr[i].tag) {
+                return objArr[i];
+            }
         }
+        return null;
+    
     }
 
     public string getCurrName(){
         return currItem;
     }
     
+    public bool checkEmpty(){
+        return (currItem == "None");
+    }
+    
+    /*
     public void CoinChange(int amount){
         coins +=amount;
         InventoryDisplay();
     }
+    */
 }

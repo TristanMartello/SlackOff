@@ -26,11 +26,7 @@ public class PlayerMove : MonoBehaviour
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         
         if (Input.GetKeyDown("space")) {
-            //GameObject currItem = playerInventory.getCurrObj();
             playerInventory.InventoryRemove(playerInventory.getCurrName());
-            
-            //GameObject droppedItem = Instantiate(currItem, dropPoint.position, dropPoint.rotation);
-            //gameObject.setActive(true);
         }
         
     }
