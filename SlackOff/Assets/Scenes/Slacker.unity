@@ -1290,7 +1290,6 @@ GameObject:
   - component: {fileID: 1082572744}
   - component: {fileID: 1082572743}
   - component: {fileID: 1082572746}
-  - component: {fileID: 1082572747}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1316,6 +1315,9 @@ MonoBehaviour:
   moveSpeed: 4
   movement: {x: 0, y: 0}
   heldItemName: None
+  isWalking: 0
+  isDown: 0
+  isUp: 0
 --- !u!61 &1082572744
 BoxCollider2D:
   m_ObjectHideFlags: 0
