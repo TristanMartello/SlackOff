@@ -8,6 +8,6 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     public void Start() 
     {
-        SceneManager.LoadScene("Slacker");
+        SceneManager.LoadScene("FirstScene");
     }
 }
