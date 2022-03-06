@@ -6,6 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     public Rigidbody2D rb;
     public GameInventory playerInventory;
+    public Transform dropPoint;
     
     public GameObject currItem;
     
