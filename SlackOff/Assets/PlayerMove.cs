@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
     
     public GameObject currItem;
     
-    public float moveSpeed = 4.00f;
+    public float moveSpeed = 4f;
     public Vector2 movement;
     public string heldItemName = "None";
     
@@ -24,46 +24,10 @@ public class PlayerMove : MonoBehaviour
         movement.y = Input.GetAxisRaw ("Vertical");
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         
-
         if (Input.GetKeyDown("space")) {
             playerInventory.InventoryRemove(playerInventory.getCurrName());
         }
-        //Down
-        if (Input.GetKeyDown("down")) {
-            isWalking = true;
-            isDown = true;
-            animator.SetBool("isWalking", true);
-            animator.SetBool("isDown", true);
-        } else if (Input.GetKeyUp("down")) {
-            isWalking = false;
-            isDown = false;
-            animator.SetBool("isWalking", false);
-            animator.SetBool("isDown", false);
-        }
-        //Up
-        if (Input.GetKeyDown("up")) {
-            isWalking = true;
-            isUp = true;
-            animator.SetBool("isWalking", true);
-            animator.SetBool("isUp", true);
-        } else if (Input.GetKeyUp("up")) {
-            isWalking = false;
-            isUp = false;
-            animator.SetBool("isWalking", false);
-            animator.SetBool("isUp", false);
-        }
         
-        if (Input.GetKeyDown("left")) {
-            animator.SetBool("isLeft", true);
-        } else if (Input.GetKeyUp("left")) {
-            animator.SetBool("isLeft", false);
-        }
-        
-        if (Input.GetKeyDown("right")) {
-            animator.SetBool("isRight", true);
-        } else if (Input.GetKeyUp("right")) {
-            animator.SetBool("isRight", false);
-        }
     }
     
     void OnCollisionEnter2D(Collision2D other){
