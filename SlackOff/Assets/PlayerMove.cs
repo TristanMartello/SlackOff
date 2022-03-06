@@ -48,15 +48,17 @@ public class PlayerMove : MonoBehaviour
         }
         //
         if (Input.GetKeyDown("up")) {
-            isWalking = true;
-            isUp = true;
+            
             animator.SetBool("isWalking", true);
             animator.SetBool("isUp", true);
+            isWalking = true;
+            isUp = true;
         } else if (Input.GetKeyUp("up")) {
-            isWalking = false;
-            isUp = false;
+            
             animator.SetBool("isWalking", false);
             animator.SetBool("isUp", false);
+            isWalking = false;
+            isUp = false;
         }
         
         if (Input.GetKeyDown("left")) {

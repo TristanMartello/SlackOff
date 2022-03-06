@@ -1272,6 +1272,10 @@ MonoBehaviour:
   rb: {fileID: 0}
   playerInventory: {fileID: 2008037000}
   dropPoint: {fileID: 43412533}
+  animator: {fileID: 1082572747}
+  isWalking: 0
+  isUp: 0
+  isDown: 0
   currItem: {fileID: 1696026018}
   moveSpeed: 4
   movement: {x: 0, y: 0}
@@ -1339,6 +1343,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &1082572747
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082572742}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3e80232ef8e7d4b12a904a74672c4ebc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1306336398
 GameObject:
   m_ObjectHideFlags: 0
