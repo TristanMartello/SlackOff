@@ -7,7 +7,10 @@ public class PlayerMove : MonoBehaviour
     public Rigidbody2D rb;
     public GameInventory playerInventory;
     public Transform dropPoint;
-    
+    public Animator animator;
+    public bool isWalking = false;
+    public bool isUp = false;
+    public bool isDown = false;
     public GameObject currItem;
     
     public float moveSpeed = 4f;
@@ -24,11 +27,51 @@ public class PlayerMove : MonoBehaviour
         movement.x = Input.GetAxisRaw ("Horizontal");
         movement.y = Input.GetAxisRaw ("Vertical");
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        animator.SetBool("isWalking", true);
+        animator.SetBool("isDown", true);
         
+
         if (Input.GetKeyDown("space")) {
             playerInventory.InventoryRemove(playerInventory.getCurrName());
         }
+        //Down
+        if (Input.GetKeyDown("down")) {
+            isWalking = true;
+            isDown = true;
+            animator.SetBool("isWalking", true);
+            animator.SetBool("isDown", true);
+        } else if (Input.GetKeyUp("down")) {
+            isWalking = false;
+            isDown = false;
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isDown", false);
+        }
+        //
+        if (Input.GetKeyDown("up")) {
+            
+            animator.SetBool("isWalking", true);
+            animator.SetBool("isUp", true);
+            isWalking = true;
+            isUp = true;
+        } else if (Input.GetKeyUp("up")) {
+            
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isUp", false);
+            isWalking = false;
+            isUp = false;
+        }
         
+        if (Input.GetKeyDown("left")) {
+            animator.SetBool("isLeft", true);
+        } else if (Input.GetKeyUp("left")) {
+            animator.SetBool("isLeft", false);
+        }
+        
+        if (Input.GetKeyDown("right")) {
+            animator.SetBool("isRight", true);
+        } else if (Input.GetKeyUp("right")) {
+            animator.SetBool("isRight", false);
+        }
     }
     
     void OnCollisionEnter2D(Collision2D other){
