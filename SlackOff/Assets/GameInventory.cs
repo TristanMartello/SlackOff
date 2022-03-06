@@ -12,12 +12,16 @@ public class GameInventory : MonoBehaviour {
 
     public static bool diskBool = false;
     public static bool cubeBool = false;
+    public static bool bearBool = false;
+    public static bool paperBool = false;
     //public static bool penBool = false;   
     public GameObject diskImage;
     public GameObject cubeImage;
+    public GameObject bearImage;
+    public GameObject paperImage;
     //public GameObject penImage;
     
-    private int arrLen = 2;
+    private int arrLen = 4;
     private GameObject[] objArr;
     private bool[] boolArr;
     
@@ -36,11 +40,13 @@ public class GameInventory : MonoBehaviour {
         
         objArr[0] = diskImage;
         objArr[1] = cubeImage;
-        //objArr[2] =  penImage;
+        objArr[2] = bearImage;
+        objArr[3] = paperImage;
 
         boolArr[0] = diskBool;
         boolArr[1] = cubeBool;
-        //boolArr[2] =  penBool;
+        boolArr[2] = bearBool;
+        boolArr[3] = paperBool;
 
     }
 

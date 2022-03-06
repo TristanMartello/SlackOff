@@ -10,6 +10,8 @@ TagManager:
   - GameHandler
   - FloppyDisk
   - RubiksCube
+  - TeddyBear
+  - PaperStack
   layers:
   - Default
   - TransparentFX
