@@ -29,8 +29,8 @@ public class PlayerMove : MonoBehaviour
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         
 
-        if (Input.GetKeyDown("space")) {
-            playerInventory.InventoryRemove(playerInventory.getCurrName());
+        if (Input.GetKeyUp("space")) {
+            playerInventory.InventoryRemove();
         }
         //Down
         if (Input.GetKeyDown("down")) {
