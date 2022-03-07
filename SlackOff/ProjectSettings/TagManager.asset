@@ -12,7 +12,7 @@ TagManager:
   - RubiksCube
   - TeddyBear
   - PaperStack
-  - InventoryCanvas
+  - Boss
   layers:
   - Default
   - TransparentFX

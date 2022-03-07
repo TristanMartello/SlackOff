@@ -27,8 +27,6 @@ public class PlayerMove : MonoBehaviour
         movement.x = Input.GetAxisRaw ("Horizontal");
         movement.y = Input.GetAxisRaw ("Vertical");
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        animator.SetBool("isWalking", true);
-        animator.SetBool("isDown", true);
         
 
         if (Input.GetKeyDown("space")) {
