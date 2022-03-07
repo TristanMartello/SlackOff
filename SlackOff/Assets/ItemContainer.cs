@@ -6,6 +6,7 @@ public class ItemContainer: MonoBehaviour {
 
     public GameInventory playerInventory;
     public string ItemName;
+    public bool workItem;
 
     void Awake(){
         if (GameObject.FindWithTag("GameHandler") != null) {
