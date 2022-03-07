@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class GameInventory : MonoBehaviour {
 
-    //5 Inventory Items:
     public GameObject InventoryMenu;
-
+    public CanvasInventory InventorySprite;
+    //public GameObject invBG;
+    
     public static string currItem = "None";
 
     public static bool diskBool = false;
@@ -30,6 +31,9 @@ public class GameInventory : MonoBehaviour {
         diskImage.SetActive(false);
         cubeImage.SetActive(false);
         getArrays();
+        
+        InventorySprite = GameObject.FindWithTag("InventoryCanvas").GetComponent<CanvasInventory>();
+        //invBG = GameObject.Find("InventoryBG");
         
         InventoryDisplay();
     }
@@ -58,19 +62,20 @@ public class GameInventory : MonoBehaviour {
                 objArr[i].SetActive(false);
             }
         }
-        //Text coinTextB = coinText.GetComponent ();
-        //coinTextB.text = ("COINS: " + coins);
     }
 
     public void InventoryAdd(string item){
         string foundItemName = item;
         
+        int foundI = 0;
         for (int i = 0; i < arrLen; i ++) {
             if (foundItemName == objArr[i].tag){
                 boolArr[i] = true;
+                foundI = i;
             }
         }
         
+        InventorySprite.pickUpItem(foundI);
         currItem = foundItemName;
         InventoryDisplay();
     }
@@ -78,12 +83,14 @@ public class GameInventory : MonoBehaviour {
     public void InventoryRemove(string item){
         string itemRemove = item;
         
+        int foundI = 0;
         for (int i = 0; i < arrLen; i ++){
             if (item == objArr[i].tag) {
                 boolArr[i] = false;
+                foundI = i;
             }
         }
-        
+        InventorySprite.dropItem(foundI);
         currItem = "None";
         InventoryDisplay();
     }

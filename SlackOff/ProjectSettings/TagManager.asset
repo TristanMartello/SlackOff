@@ -12,6 +12,7 @@ TagManager:
   - RubiksCube
   - TeddyBear
   - PaperStack
+  - InventoryCanvas
   layers:
   - Default
   - TransparentFX

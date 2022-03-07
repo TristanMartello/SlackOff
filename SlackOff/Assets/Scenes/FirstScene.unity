@@ -2061,7 +2061,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 0.2}
+  m_Size: {x: 1.46, y: 0.2}
   m_EdgeRadius: 0
 --- !u!1 &1382491442
 GameObject:
@@ -2075,7 +2075,7 @@ GameObject:
   - component: {fileID: 1382491445}
   - component: {fileID: 1382491444}
   m_Layer: 5
-  m_Name: coinText
+  m_Name: InventoryLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2554,9 +2554,10 @@ GameObject:
   - component: {fileID: 1982472416}
   - component: {fileID: 1982472418}
   - component: {fileID: 1982472417}
+  - component: {fileID: 1982472419}
   m_Layer: 5
   m_Name: InventoryBG
-  m_TagString: Untagged
+  m_TagString: InventoryCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2587,7 +2588,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982472415}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -2618,6 +2619,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982472415}
   m_CullTransparentMesh: 1
+--- !u!114 &1982472419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982472415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80c2fe15e62b82c4d98d6f748aeb7d9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diskImage: {fileID: 114782554}
+  cubeImage: {fileID: 357320694}
+  bearImage: {fileID: 1145715779}
+  paperImage: {fileID: 1036474599}
+  holdingItem: 0
 --- !u!1 &1997388130
 GameObject:
   m_ObjectHideFlags: 0
@@ -2693,6 +2711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InventoryMenu: {fileID: 1066798576}
+  InventorySprite: {fileID: 0}
   diskImage: {fileID: 114782554}
   cubeImage: {fileID: 357320694}
   bearImage: {fileID: 1145715779}
