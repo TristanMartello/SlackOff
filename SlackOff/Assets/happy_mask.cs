@@ -16,7 +16,7 @@ public class happy_mask : MonoBehaviour
     {
         if (width < 800) {
             width = width + 1;
-            GameObject mask = GameObject.Find ("Canvas/HUD/happy_mask");
+            GameObject mask = GameObject.Find ("Canvas/happy_mask");
             var mask_trans = mask.transform as RectTransform;
             mask_trans.sizeDelta = new Vector2 (width, mask_trans.sizeDelta.y);
         }
